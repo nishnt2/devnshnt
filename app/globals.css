@@ -3,31 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  --xxl-font-size: calc(var(--base-font-size) * 5); /*80px*/
+  --xl-font-size: calc(var(--base-font-size) * 3.75); /*60px*/
+  --lg-font-size: calc(var(--base-font-size) * 3.125); /*50px*/
+  --lm-font-size: calc(var(--base-font-size) * 2.5); /*40px*/
+  --md-font-size: calc(var(--base-font-size) * 1.875); /*30px*/
+  --ms-font-size: calc(var(--base-font-size) * 2); /*32px*/
+  --sm-font-size: calc(var(--base-font-size) * 1.375); /*22px*/
+  --xs-font-size: calc(var(--base-font-size) * 1.125); /*18px*/
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --base-font-size: 1rem;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  background: #000;
 }

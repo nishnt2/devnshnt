@@ -1,8 +1,13 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, PT_Sans } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
+const pt_sans = PT_Sans({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-pt-sans',
+});
 
 export const metadata: Metadata = {
   title: "Nishant's Folio",
@@ -16,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${pt_sans.className} font-sans`}>
+        {children}
+      </body>
     </html>
   );
 }
